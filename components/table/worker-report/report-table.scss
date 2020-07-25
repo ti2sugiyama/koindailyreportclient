@@ -1,0 +1,192 @@
+
+$content-width : 600px;
+$content-height :400px;
+$cell-rowheader-width:40px;
+$cell-width:80px;
+$cell-height:40px;
+$cell-boolean-width:25px;
+
+$color1 : #B9340B;
+$color2 : #CEA45C;
+$color3 : #C5BE8B;
+$color4 : #498379;
+$color5 : #3F261C;
+
+
+  .btn-delete{
+    padding-left: 10px;
+    color: $color1;
+    cursor: pointer;
+    &:hover{
+      color: red;
+    }
+  }
+  .row-col-header{
+    border-right: 2px solid lightsteelblue;
+    border-bottom: 2px solid lightsteelblue;
+  }
+  .row-header{
+    border-right: 2px solid lightsteelblue;
+  }
+  .col-header{
+      border-bottom: 2px solid lightsteelblue;
+    .col-header1{
+      .col-group{
+        border-right:none!important;
+        border-bottom: 1px solid $color5 ;
+      }
+    }
+  }
+
+
+  .col-group{
+    border-right: 1px solid lightslategray;
+  }
+  .row-date{
+    border-bottom: 1px solid lightslategray;
+    box-sizing: border-box;
+    *{
+      vertical-align: middle;
+    }
+  }
+
+  .table {
+    //数字入力時のスピンボタンを消す
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .header-area, .contents-area , .footer-area{
+      display: table;
+      width:100%;
+    }
+
+    .row-col-header{
+      display: table-cell;
+      vertical-align: middle;
+      min-width:($cell-rowheader-width*2);
+      width:($cell-rowheader-width*2);
+      height:($cell-height*2);
+    }
+    .col-group{
+      min-width: ($cell-width * 5 + $cell-boolean-width)!important;
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .col-header{
+      width: $content-width;
+      overflow: hidden;
+      height:($cell-height*2);
+      .col-header1{
+        height:$cell-height;
+        display: table;
+        vertical-align: middle;
+      }
+      .col-header2{
+        height:$cell-height;
+        display: table;
+      }
+      .btn-delete{
+        margin:auto;
+      }
+    }
+
+    .working-time, .over-working-time, .night-working-time, .cost-food, .note {
+      display: table-cell;
+      height: inherit;
+      vertical-align: middle;
+      width:$cell-width;
+      padding:0px;
+      input{
+        border:none;
+        width:75px;
+        text-align: center;
+        background-color: inherit;
+        &:focus{
+          outline:solid 1px darkgrey;
+        }
+      }
+    }
+    .holidaywork{
+      display: table-cell;
+      height: inherit;
+      vertical-align: middle;
+      text-align: center;
+      width:$cell-boolean-width;
+      padding:0px;
+    }
+
+    .row-header{
+      height:$content-height;
+      overflow-y: hidden;
+      width:($cell-rowheader-width*2);
+      .row-header1{
+        display: table-cell;
+        width:$cell-rowheader-width;
+      }
+      .row-header2{
+        display: table-cell;
+        width:$cell-rowheader-width;
+      }
+    }
+    .row-date{
+      display: table;
+      height:$cell-height;
+    }
+
+    .header-left, .header-right,.contents-left, .contents-right, .footer-left, .footer-right{
+      display: table-cell;
+      vertical-align: top;
+    }
+
+    .header-left, .contents-left,.footer-left{
+      width:($cell-rowheader-width*2);
+    }
+
+    .row-col-footer{
+      margin-top:10px;
+      display: table-cell;
+      vertical-align: middle;
+      width:($cell-rowheader-width*2);
+      min-width:($cell-rowheader-width*2);
+      height:$cell-height;
+    }
+
+    .col-footer{
+      margin-top:10px;
+      width: $content-width;
+      
+      overflow:hidden;
+      .col-footer1{
+        height: $cell-height;
+        text-align: middle;
+      }
+    }
+  }
+
+  .tbody {
+    overflow-x: auto;
+    overflow-y: auto;
+      
+    height:$content-height;
+    width: $content-width;
+  }
+
+  .horizontalscroll-margin{
+    display: table-cell;
+    min-width: 30px;
+  }
+  .verticalscroll-margin{
+    min-height: 30px;
+  }
+
+
+  
+.align-left{
+    text-align: left;
+}
+.align-right{
+    text-align: right;
+}
